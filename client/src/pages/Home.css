@@ -138,43 +138,18 @@
   justify-content: center;
 }
 
-.hero__image-placeholder {
+.hero__image {
   position: relative;
-
+  display: block;
   width: min(100%, 480px);
   aspect-ratio: 4 / 5;
-
+  object-fit: cover;
+  object-position: center;
   overflow: hidden;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(111, 119, 95, 0.9),
-      rgba(111, 119, 95, 0.55)
-    );
-
   border-radius: 180px 180px 12px 12px;
-
   box-shadow:
     20px 20px 0 var(--color-surface),
     -1px -1px 0 rgba(41, 35, 31, 0.08);
-}
-
-.hero__image-placeholder::before {
-  content: "M&B";
-
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: rgba(255, 255, 255, 0.75);
-
-  font-family: var(--font-display);
-  font-size: clamp(4rem, 8vw, 7rem);
-  font-style: italic;
 }
 
 
@@ -200,7 +175,7 @@
     min-height: auto;
   }
 
-  .hero__image-placeholder {
+  .hero__image {
     width: min(100%, 420px);
   }
 }
@@ -231,7 +206,7 @@
     margin-top: var(--space-3);
   }
 
-  .hero__image-placeholder {
+  .hero__image {
     width: 85%;
   }
 }

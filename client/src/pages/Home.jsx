@@ -48,10 +48,11 @@ function Home() {
             </div>
 
             <div className="hero__visual fade-in">
-              <div
-                className="hero__image-placeholder"
-                aria-label="Mitti & Bean café"
-              />
+                <img
+                    className="hero__image"
+                    src="/images/hero/hero-cafe.jpg"
+                    alt="Warm interior of Mitti & Bean café"
+                />
             </div>
           </div>
         </section>
