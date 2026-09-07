@@ -51,31 +51,38 @@ function MenuSection() {
         </div>
 
         <div className="menu-section__category">
-          <div className="menu-section__category-header">
+        <div className="menu-section__category-header">
             <h3>{currentCategory.name}</h3>
-
             <p>{currentCategory.description}</p>
-          </div>
+        </div>
 
-          <div className="menu-section__items">
+        <div className="menu-section__category-content">
+            <div className="menu-section__image">
+            <img
+                src={`/images/menu/${currentCategory.id}.jpg`}
+                alt={`${currentCategory.name} at Mitti & Bean`}
+            />
+            </div>
+
+            <div className="menu-section__items">
             {currentCategory.items.map((item) => (
-              <article className="menu-item" key={item.id}>
+                <article className="menu-item" key={item.id}>
                 <div className="menu-item__content">
-                  <h4 className="menu-item__name">
+                    <h4 className="menu-item__name">
                     {item.name}
-                  </h4>
-
-                  <p className="menu-item__description">
+                    </h4>
+                    <p className="menu-item__description">
                     {item.description}
-                  </p>
+                    </p>
                 </div>
 
                 <span className="menu-item__price">
-                  ₹{item.price}
+                    ₹{item.price}
                 </span>
-              </article>
+                </article>
             ))}
-          </div>
+            </div>
+        </div>
         </div>
       </div>
     </section>

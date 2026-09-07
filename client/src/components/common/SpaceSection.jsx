@@ -25,17 +25,26 @@ function SpaceSection() {
         </div>
 
         <div className="space-section__gallery">
-          <div className="space-section__image space-section__image--large">
-            <span>Image 01</span>
-          </div>
+            <div className="space-section__image space-section__image--large">
+                <img
+                src="/images/space/interior.jpg"
+                alt="Warm interior of Mitti & Bean café"
+                />
+            </div>
 
-          <div className="space-section__image space-section__image--small">
-            <span>Image 02</span>
-          </div>
+            <div className="space-section__image space-section__image--small">
+                <img
+                src="/images/space/seating.jpg"
+                alt="Quiet seating area inside Mitti & Bean café"
+                />
+            </div>
 
-          <div className="space-section__image space-section__image--small">
-            <span>Image 03</span>
-          </div>
+            <div className="space-section__image space-section__image--small">
+                <img
+                src="/images/space/detail.jpg"
+                alt="Interior detail at Mitti & Bean café"
+                />
+            </div>
         </div>
       </div>
     </section>

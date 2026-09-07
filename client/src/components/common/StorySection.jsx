@@ -27,10 +27,12 @@ function StorySection() {
           </p>
         </div>
 
-        <div className="story__visual" aria-hidden="true">
-          <div className="story__image-placeholder">
-            <span>M&B</span>
-          </div>
+        <div className="story__visual">
+            <img
+                className="story__image"
+                src="/images/story/story-cafe.jpg"
+                alt="Barista preparing coffee at Mitti & Bean"
+            />
         </div>
       </div>
     </section>

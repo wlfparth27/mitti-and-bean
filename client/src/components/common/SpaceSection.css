@@ -53,30 +53,21 @@
 
 .space-section__image {
   position: relative;
-
   overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(184, 92, 56, 0.8),
-      rgba(111, 119, 95, 0.8)
-    );
-
-  color: rgba(255, 255, 255, 0.75);
-
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-
   transition: transform var(--transition-slow);
 }
 
-.space-section__image:hover {
-  transform: scale(1.01);
+.space-section__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--transition-slow);
+}
+
+.space-section__image:hover img {
+  transform: scale(1.03);
 }
 
 .space-section__image--large {
