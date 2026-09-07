@@ -2,6 +2,7 @@ import Navbar from "../components/layout/Navbar";
 import StorySection from "../components/common/StorySection";
 import MenuSection from "../components/common/MenuSection";
 import SpaceSection from "../components/common/SpaceSection";
+import TestimonialsSection from "../components/common/TestimonialsSection";
 import "./Home.css";
 
 function Home() {
@@ -57,6 +58,8 @@ function Home() {
         <MenuSection />
 
         <SpaceSection />
+
+        <TestimonialsSection />
       </main>
     </div>
   );
