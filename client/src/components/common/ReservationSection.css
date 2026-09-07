@@ -1,0 +1,162 @@
+.reservation-section {
+  padding-block: var(--space-10);
+  background: var(--color-text);
+  color: var(--color-background);
+}
+
+.reservation-section__inner {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+.reservation-section__intro {
+  position: sticky;
+  top: 120px;
+}
+
+.reservation-section__eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-4);
+  color: #d99a7e;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.reservation-section__title {
+  margin-bottom: var(--space-5);
+  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.reservation-section__description {
+  max-width: 46ch;
+  color: rgba(245, 240, 232, 0.72);
+  font-size: var(--text-base);
+  line-height: 1.8;
+}
+
+.reservation-section__note {
+  max-width: 46ch;
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(245, 240, 232, 0.15);
+  color: rgba(245, 240, 232, 0.5);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+.reservation-form {
+  padding: var(--space-7);
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.reservation-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.reservation-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.reservation-form__field label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.reservation-form__field input,
+.reservation-form__field select,
+.reservation-form__field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.reservation-form__field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.reservation-form__field input::placeholder,
+.reservation-form__field textarea::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.65;
+}
+
+.reservation-form__field input:focus,
+.reservation-form__field select:focus,
+.reservation-form__field textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(184, 92, 56, 0.12);
+}
+
+.reservation-form__submit {
+  width: 100%;
+  min-height: 58px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.reservation-form__submit:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+}
+
+.reservation-form__submit span {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 900px) {
+  .reservation-section__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .reservation-section__intro {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .reservation-section {
+    padding-block: var(--space-8);
+  }
+
+  .reservation-form {
+    padding: var(--space-5);
+  }
+
+  .reservation-form__row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

@@ -3,6 +3,8 @@ import StorySection from "../components/common/StorySection";
 import MenuSection from "../components/common/MenuSection";
 import SpaceSection from "../components/common/SpaceSection";
 import TestimonialsSection from "../components/common/TestimonialsSection";
+import VisitSection from "../components/common/VisitSection";
+import ReservationSection from "../components/common/ReservationSection";
 import "./Home.css";
 
 function Home() {
@@ -60,6 +62,10 @@ function Home() {
         <SpaceSection />
 
         <TestimonialsSection />
+
+        <VisitSection />
+
+        <ReservationSection />
       </main>
     </div>
   );
