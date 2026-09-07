@@ -82,4 +82,9 @@
   .story__text {
     font-size: var(--text-base);
   }
+
+  .story__image {
+    width: 85%;
+    margin-inline: auto;
+  }
 }

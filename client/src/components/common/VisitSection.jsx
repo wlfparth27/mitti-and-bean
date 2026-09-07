@@ -57,14 +57,22 @@ function VisitSection() {
         </div>
 
         <div className="visit-section__map">
-          <div className="visit-section__map-placeholder">
-            <span className="visit-section__map-pin">●</span>
+            <img
+                className="visit-section__map-image"
+                src="/images/space/interior.jpg"
+                alt="Interior of Mitti & Bean café"
+            />
 
-            <div>
-              <strong>Mitti & Bean</strong>
-              <span>Your City, India</span>
+            <div className="visit-section__map-overlay" />
+
+            <div className="visit-section__map-placeholder">
+                <span className="visit-section__map-pin">●</span>
+
+                <div>
+                <strong>Mitti & Bean</strong>
+                <span>Your City, India</span>
+                </div>
             </div>
-          </div>
         </div>
       </div>
     </section>

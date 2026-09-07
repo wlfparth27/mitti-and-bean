@@ -1,7 +1,10 @@
 import { useState } from "react";
+
 import "./ReservationSection.css";
 
 function ReservationSection() {
+  const [submitted, setSubmitted] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,8 +27,20 @@ function ReservationSection() {
     event.preventDefault();
 
     console.log("Reservation submitted:", formData);
+    setSubmitted(true);
+  };
 
-    alert("Thank you! Your reservation request has been received.");
+  const handleReset = () => {
+    setFormData({
+      name: "",
+      email: "",
+      date: "",
+      time: "",
+      guests: "2",
+      message: "",
+    });
+
+    setSubmitted(false);
   };
 
   return (
@@ -54,111 +69,138 @@ function ReservationSection() {
           </p>
         </div>
 
-        <form
-          className="reservation-form"
-          onSubmit={handleSubmit}
-        >
-          <div className="reservation-form__row">
-            <div className="reservation-form__field">
-              <label htmlFor="name">Name</label>
+        <div className="reservation-form">
+          {submitted ? (
+            <div className="reservation-success">
+              <span className="reservation-success__mark">✓</span>
 
-              <input
-                id="name"
-                name="name"
-                type="text"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Your name"
-                required
-              />
+              <span className="reservation-success__eyebrow">
+                Request received
+              </span>
+
+              <h3 className="reservation-success__title">
+                Your table is almost yours.
+              </h3>
+
+              <p className="reservation-success__text">
+                Thanks for sending your reservation request.
+                We'll be in touch shortly to confirm the details.
+              </p>
+
+              <button
+                className="reservation-success__button"
+                type="button"
+                onClick={handleReset}
+              >
+                Make another request
+                <span aria-hidden="true">→</span>
+              </button>
             </div>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <div className="reservation-form__row">
+                <div className="reservation-form__field">
+                  <label htmlFor="name">Name</label>
 
-            <div className="reservation-form__field">
-              <label htmlFor="email">Email</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
 
-              <input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="you@example.com"
-                required
-              />
-            </div>
-          </div>
+                <div className="reservation-form__field">
+                  <label htmlFor="email">Email</label>
 
-          <div className="reservation-form__row">
-            <div className="reservation-form__field">
-              <label htmlFor="date">Date</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+              </div>
 
-              <input
-                id="date"
-                name="date"
-                type="date"
-                value={formData.date}
-                onChange={handleChange}
-                required
-              />
-            </div>
+              <div className="reservation-form__row">
+                <div className="reservation-form__field">
+                  <label htmlFor="date">Date</label>
 
-            <div className="reservation-form__field">
-              <label htmlFor="time">Time</label>
+                  <input
+                    id="date"
+                    name="date"
+                    type="date"
+                    value={formData.date}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <input
-                id="time"
-                name="time"
-                type="time"
-                value={formData.time}
-                onChange={handleChange}
-                required
-              />
-            </div>
-          </div>
+                <div className="reservation-form__field">
+                  <label htmlFor="time">Time</label>
 
-          <div className="reservation-form__field">
-            <label htmlFor="guests">Number of Guests</label>
+                  <input
+                    id="time"
+                    name="time"
+                    type="time"
+                    value={formData.time}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+              </div>
 
-            <select
-              id="guests"
-              name="guests"
-              value={formData.guests}
-              onChange={handleChange}
-            >
-              <option value="1">1 guest</option>
-              <option value="2">2 guests</option>
-              <option value="3">3 guests</option>
-              <option value="4">4 guests</option>
-              <option value="5">5 guests</option>
-              <option value="6">6 guests</option>
-              <option value="7">7 guests</option>
-              <option value="8">8 guests</option>
-            </select>
-          </div>
+              <div className="reservation-form__field">
+                <label htmlFor="guests">Number of Guests</label>
 
-          <div className="reservation-form__field">
-            <label htmlFor="message">
-              Anything we should know?
-            </label>
+                <select
+                  id="guests"
+                  name="guests"
+                  value={formData.guests}
+                  onChange={handleChange}
+                >
+                  <option value="1">1 guest</option>
+                  <option value="2">2 guests</option>
+                  <option value="3">3 guests</option>
+                  <option value="4">4 guests</option>
+                  <option value="5">5 guests</option>
+                  <option value="6">6 guests</option>
+                  <option value="7">7 guests</option>
+                  <option value="8">8 guests</option>
+                </select>
+              </div>
 
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Birthday, window seat, dietary requirements..."
-              rows="4"
-            />
-          </div>
+              <div className="reservation-form__field">
+                <label htmlFor="message">
+                  Anything we should know?
+                </label>
 
-          <button
-            className="reservation-form__submit"
-            type="submit"
-          >
-            Request a Table
-            <span aria-hidden="true">→</span>
-          </button>
-        </form>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Birthday, window seat, dietary requirements..."
+                  rows="4"
+                />
+              </div>
+
+              <button
+                className="reservation-form__submit"
+                type="submit"
+              >
+                Request a Table
+                <span aria-hidden="true">→</span>
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </section>
   );

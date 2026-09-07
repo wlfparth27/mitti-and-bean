@@ -2,7 +2,7 @@ import "./SpaceSection.css";
 
 function SpaceSection() {
   return (
-    <section className="space-section" id="visit">
+    <section className="space-section" id="space">
       <div className="space-section__inner container">
         <div className="space-section__header">
           <div>

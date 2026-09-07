@@ -208,5 +208,6 @@
 
   .hero__image {
     width: 85%;
+    margin-inline: auto;
   }
 }
