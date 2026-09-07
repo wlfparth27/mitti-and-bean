@@ -1,0 +1,87 @@
+:root {
+  /* ================================
+     Brand Colours
+     ================================ */
+
+  --color-background: #f5f0e8;
+  --color-surface: #e8e0d4;
+  --color-text: #29231f;
+  --color-text-muted: #756a60;
+
+  --color-accent: #b85c38;
+  --color-accent-dark: #94452a;
+
+  --color-sage: #6f775f;
+  --color-white: #ffffff;
+
+
+  /* ================================
+     Typography
+     ================================ */
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+
+
+  /* ================================
+     Font Sizes
+     ================================ */
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 3rem;
+  --text-4xl: 4.5rem;
+
+
+  /* ================================
+     Spacing
+     ================================ */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+
+  /* ================================
+     Layout
+     ================================ */
+
+  --container-width: 1200px;
+  --page-padding: 1.5rem;
+
+
+  /* ================================
+     Borders
+     ================================ */
+
+  --border-subtle: rgba(41, 35, 31, 0.15);
+  --border-strong: rgba(41, 35, 31, 0.3);
+
+
+  /* ================================
+     Transitions
+     ================================ */
+
+  --transition-fast: 180ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 600ms ease;
+
+
+  /* ================================
+     Other
+     ================================ */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}

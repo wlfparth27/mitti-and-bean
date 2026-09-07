@@ -1,0 +1,131 @@
+@import "./variables.css";
+
+/* ================================
+   Reset
+   ================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/* ================================
+   Typography
+   ================================ */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+
+/* ================================
+   Layout
+   ================================ */
+
+.container {
+  width: min(
+    calc(100% - (var(--page-padding) * 2)),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+
+/* ================================
+   Accessibility
+   ================================ */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+
+/* ================================
+   Selection
+   ================================ */
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (min-width: 768px) {
+  :root {
+    --page-padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --page-padding: 3rem;
+  }
+}
