@@ -5,6 +5,7 @@ import SpaceSection from "../components/common/SpaceSection";
 import TestimonialsSection from "../components/common/TestimonialsSection";
 import VisitSection from "../components/common/VisitSection";
 import ReservationSection from "../components/common/ReservationSection";
+import Footer from "../components/layout/Footer";
 import "./Home.css";
 
 function Home() {
@@ -66,6 +67,8 @@ function Home() {
         <VisitSection />
 
         <ReservationSection />
+
+        <Footer />
       </main>
     </div>
   );
