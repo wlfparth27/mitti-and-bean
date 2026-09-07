@@ -1,4 +1,5 @@
 import Navbar from "../components/layout/Navbar";
+import StorySection from "../components/common/StorySection";
 import "./Home.css";
 
 function Home() {
@@ -48,6 +49,8 @@ function Home() {
             </div>
           </div>
         </section>
+
+        <StorySection />
       </main>
     </div>
   );
